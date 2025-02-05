@@ -18,7 +18,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraftforge.network.packets.SpawnEntity;
 
 import javax.annotation.Nullable;
 
@@ -29,10 +28,6 @@ import static net.minecraft.world.entity.EntityType.LIGHTNING_BOLT;
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
 public class EntityTorch extends AbstractArrow {
-
-    public EntityTorch(SpawnEntity spawnEntity, Level level) {
-        this(entityTorch.get(), level);
-    }
 
     public EntityTorch(Level worldIn, LivingEntity shooter, ItemStack pickup, @Nullable ItemStack weaponStack) {
         super(entityTorch.get(), shooter, worldIn,pickup, weaponStack);
